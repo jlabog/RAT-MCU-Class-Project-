@@ -12,7 +12,15 @@
 --
 -- Dependencies: 
 --
--- Revision: 
+-- Revision: 2-17-15
+-- *Added INT_FLAG
+-- *Added signals for INT_FLAG module
+-- *Added AND gate for INT_FLAG and INT 
+-- *Added signals for output of AND gate and 
+--  connected to control unit
+-- *Added shadow flag modules along with signals
+-- *Added multiplexors for normal flag modules along 
+--  signals
 -- Revision 0.01 - File Created
 -- Additional Comments: 
 --
@@ -34,6 +42,20 @@ end RAT_MCU;
 
 
 architecture Behavioral of RAT_MCU is
+	
+	component shad_flag
+	port (clk  : in  std_logic;
+			ld   : in  std_logic;
+			d    : in  std_logic;
+			flag : out std_logic);
+	end component;
+	
+	component int_flag 
+	port (clk  : in  std_logic;
+			set  : in  std_logic;
+			clr  : in  std_logic;
+			flag : out std_logic);
+	end component;
 	
 	component scr 
 	port (
@@ -196,8 +218,28 @@ architecture Behavioral of RAT_MCU is
 	signal s_sp_in  : std_logic_vector(7 downto 0);
 	signal s_sp_out : std_logic_vector(7 downto 0);
 	
+	-- INT_FLAG signals
+	signal s_int_flag_set : std_logic;
+	signal s_int_flag_clr : std_logic;
+	signal s_int_flag : std_logic;
+   signal s_INT : std_logic;
+	
+	-- SHADOW FLAG signals
+	signal s_flg_ld_sel : std_logic;
+	signal s_shad_ld : std_logic;
+	signal s_z_shad : std_logic;
+	signal s_c_shad : std_logic;
+	signal s_ALU_C  : std_logic;
+	signal s_ALU_Z  : std_logic;
 begin
 	
+	my_int_flag: int_flag 
+	port map (clk  => clk,
+			    set  => s_int_flag_set,
+			    clr  => s_int_flag_clr,
+			    flag => s_int_flag);
+				 
+				 
    my_prog_rom: prog_rom  
    port map(     ADDRESS => s_pc_count, 
              INSTRUCTION => s_inst_reg, 
@@ -211,16 +253,17 @@ begin
               B => s_b,       
               Cin => s_cin,     
               SEL => s_alu_sel,     
-              C => s_c_flag,       
-              Z => s_z_in,       
+              C => s_ALU_C,       
+              Z => s_ALU_Z,       
               RESULT => s_result ); 
 
-
+	s_INT <= s_int_flag and INT;
+	
    my_cu: CONTROL_UNIT 
    port map ( CLK           => CLK, 
               C             => s_cin, 
               Z             => s_z_out, 
-              INT           => INT, 
+              INT           => s_INT, 
               RESET         => RESET, 
               OPCODE_HI_5   => s_inst_reg(17 downto 13), 
               OPCODE_LO_2   => s_inst_reg(1 downto 0), 
@@ -244,14 +287,14 @@ begin
               SCR_OE        => s_scr_oe, 
               SCR_ADDR_SEL  => s_scr_addr_sel,
               
-              FLG_C_LD          => s_c_ld, 
-              FLG_C_SET         => s_c_set, 
-              FLG_C_CLR         => s_c_clr, 
-              FLG_SHAD_LD       => open, 
-              FLG_LD_SEL        => open, 
-              FLG_Z_LD          => s_z_ld, 
-              I_FLAG_SET    => open, 
-              I_FLAG_CLR    => open, 
+              FLG_C_LD      => s_c_ld, 
+              FLG_C_SET     => s_c_set, 
+              FLG_C_CLR     => s_c_clr, 
+              FLG_SHAD_LD   => s_shad_ld, 
+              FLG_LD_SEL    => s_flg_ld_sel, 
+              FLG_Z_LD      => s_z_ld, 
+              I_FLAG_SET    => s_int_flag_set, 
+              I_FLAG_CLR    => s_int_flag_clr, 
 
               RST           => s_rst,
               IO_STRB       => IO_STRB);
@@ -280,11 +323,14 @@ begin
               PC_INC     => s_pc_inc,
               FROM_IMMED => s_ir_immed_bits,
               FROM_STACK => s_multi_bus,
-              FROM_INTRR => "0000000000",
+              FROM_INTRR => (others => '1'),
               PC_MUX_SEL => s_pc_mux_sel,
               PC_COUNT   => s_pc_count,
               PC_TRI     => s_multi_bus); 
-
+	
+	s_c_flag <= s_c_shad when s_flg_ld_sel = '1' else
+					s_ALU_C;
+					
 	my_C_FLAG : C_Flag
 	port map (D    => s_c_flag,
              LD   => s_c_ld, 
@@ -292,6 +338,9 @@ begin
              CLR  => s_c_clr,
              CLK  => CLK,
              Q    => s_cin);
+	
+	s_z_in <= s_z_shad when s_flg_ld_sel = '1' else
+				 s_ALU_Z;
 				 
 	my_Z_FLAG : Z_FLAG
 	port map (D    => s_z_in,
@@ -330,6 +379,18 @@ begin
 		sp_out => s_sp_out
 	);
 	
+	my_Z_SHAD_FLAG : SHAD_FLAG
+	port map (clk  => clk,
+		    	 ld   => s_shad_ld,
+			    d    => s_z_out,
+			    flag => s_z_shad);
+	
+	my_C_SHAD_FLAG : SHAD_FLAG
+	port map (clk  => clk,
+			    ld   => s_shad_ld,
+			    d    => s_cin,
+			    flag => s_c_shad);
+				 
 	OUT_PORT <= s_multi_bus(7 downto 0);
 	
 	PORT_ID <= s_inst_reg(7 downto 0);

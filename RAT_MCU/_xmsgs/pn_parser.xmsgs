@@ -8,37 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/ALU.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/C_Flag.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_ControlUnit_Starter_exp7.vhd&quot; into library work</arg>
-</msg>
-
 <msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_RAT_MCU_starter_exp7.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/SP.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/Z_Flag.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/counter.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/counter_mux.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/pc.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/reg_file.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/scratch_ram.vhd&quot; into library work</arg>
 </msg>
 
 </messages>

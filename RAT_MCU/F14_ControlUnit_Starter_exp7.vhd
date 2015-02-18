@@ -13,6 +13,12 @@
 -- Dependencies: 
 --
 -- Revision: 
+-- 2-17-15
+-- *Added RETID and RETIE
+-- *ADDED ST_int 
+-- *Included INT in process sensitivity list
+-- *Modified Execute with branch instruction that chosses 
+--  ST_int if INT is asserted.
 -- Revision 0.01 - File Created
 -- Additional Comments: 
 --
@@ -66,7 +72,7 @@ end;
 
 architecture Behavioral of CONTROL_UNIT is
 
-   type state_type is (ST_init, ST_fet, ST_exec);
+   type state_type is (ST_init, ST_fet, ST_exec, ST_int);
       signal PS,NS : state_type;
 		
 	signal sig_OPCODE_7: std_logic_vector (6 downto 0);
@@ -86,7 +92,7 @@ begin
    end process sync_p;
 
 
-   comb_p: process (sig_OPCODE_7, PS, NS, C, Z)
+   comb_p: process (sig_OPCODE_7, PS, NS, C, Z, INT)
    begin
    
     	-- preset everything to known values --------------------------
@@ -110,7 +116,22 @@ begin
       IO_STRB <= '0';      RST <= '0'; 
             
    case PS is
-      
+   
+	when ST_int =>
+			I_FLAG_CLR <= '1';  
+			I_FLAG_SET <= '0';
+			PC_MUX_SEL <= "10";
+			PC_LD <= '1';
+			FLG_SHAD_LD <= '1';
+			PC_OE <= '1';
+			SCR_WR <= '1';
+			SCR_ADDR_SEL <= "11";
+			SP_MUX_SEL <= "10";
+			SP_LD <= '1';
+		NS <= ST_fet;
+		
+	
+	
       -- STATE: the init cycle ------------------------------------
 	-- Initialize all control outputs to non-active states and 
       --   Reset the PC and SP to all zeros.
@@ -127,8 +148,13 @@ begin
             
       -- STATE: the execute cycle ---------------------------------
       when ST_exec => 
+			if (INT = '0') then
            NS <= ST_fet;
-           PC_INC <= '0';  -- don't increment PC
+			else
+			  NS <= ST_int;
+			end if;
+			
+        PC_INC <= '0';  -- don't increment PC
 				
 	     case sig_OPCODE_7 is		
 
@@ -201,6 +227,26 @@ begin
 					 SCR_ADDR_SEL <= "10";
 					 SP_MUX_SEL <= "11";
 					 SP_LD <= '1';
+		  -- RETID --------------------
+					when "0110110" =>
+					 PC_MUX_SEL <= "01";
+					 PC_LD <= '1';
+					 SCR_ADDR_SEL <= "10";
+					 SP_MUX_SEL <= "11";
+					 SP_LD <= '1';
+					 FLG_LD_SEL <= '1';
+					 I_FLAG_CLR <= '1';
+					 I_FLAG_SET <= '0';
+		  -- RETIE ---------------------
+					when "0110111" =>
+					 PC_MUX_SEL <= "01";
+					 PC_LD <= '1';
+					 SCR_ADDR_SEL <= "10";
+					 SP_MUX_SEL <= "11";
+					 SP_LD <= '1';
+					 FLG_LD_SEL <= '1';
+					 I_FLAG_CLR <= '0';
+					 I_FLAG_SET <= '1';
 		  -- PUSH ---------------------
 				   when "0100101" =>
 				    RF_OE <= '1';
@@ -210,6 +256,14 @@ begin
 					 SCR_ADDR_SEL <= "11";
 					 SP_MUX_SEL <= "10";
 					 SP_LD <= '1';
+		  -- SEI -------------------------
+					when "0110100" =>
+					 I_FLAG_SET <= '1';
+					 I_FLAG_CLR <= '0';
+		  -- CLI -------------------------
+					when "0110101" =>
+					 I_FLAG_CLR <= '1';
+					 I_FLAG_SET <= '0';
 		  -- POP -------------------------
 					when "0100110" =>
 					 SCR_WR <= '0';

@@ -21,7 +21,16 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="RAT_MCU.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema"/>
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="INT_FLAG.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="INT_FLAG.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="INT_FLAG.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAT_MCU.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAT_MCU.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RAT_MCU.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
