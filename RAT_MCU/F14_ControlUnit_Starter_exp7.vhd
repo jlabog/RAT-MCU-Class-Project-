@@ -229,6 +229,8 @@ begin
 					 SP_LD <= '1';
 		  -- RETID --------------------
 					when "0110110" =>
+					 SCR_OE <= '1';
+					 SCR_WR <= '0';
 					 PC_MUX_SEL <= "01";
 					 PC_LD <= '1';
 					 SCR_ADDR_SEL <= "10";
@@ -239,6 +241,8 @@ begin
 					 I_FLAG_SET <= '0';
 		  -- RETIE ---------------------
 					when "0110111" =>
+					 SCR_OE <= '1';
+					 SCR_WR <= '0';
 					 PC_MUX_SEL <= "01";
 					 PC_LD <= '1';
 					 SCR_ADDR_SEL <= "10";

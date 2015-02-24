@@ -1,0 +1,30 @@
+Command line:
+   RAT_MCU_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50233
+
+Wed Feb 18 01:56:41 2015
+
+
+ Elaboration Time: 0.109201 sec
+
+ Current Memory Usage: 1324.2 Meg
+
+ Total Signals          : 226
+ Total Nets             : 3117
+ Total Signal Drivers   : 71
+ Total Blocks           : 26
+ Total Primitive Blocks : 22
+ Total Processes        : 44
+ Total Traceable Variables  : 206
+ Total Scalar Nets and Variables : 26339
+Total Line Count : 289
+Total Line Count : 289
+
+ Total Simulation Time: 1.24801 sec
+
+ Current Memory Usage: 695.022 Meg
+
+Wed Feb 18 02:01:00 2015
+

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/RAT_wrapper_tb_isim_beh.exe" -prj "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/RAT_wrapper_tb_beh.prj" "work.RAT_wrapper_tb" 

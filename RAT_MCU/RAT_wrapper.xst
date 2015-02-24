@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/xst"
+elaborate
+-ifn RAT_wrapper.prj
+-ifmt mixed

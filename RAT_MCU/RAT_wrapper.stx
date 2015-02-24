@@ -1,0 +1,63 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/counter.vhd" in Library work.
+Architecture arch of Entity counter is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/counter_mux.vhd" in Library work.
+Architecture arch of Entity counter_mux is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/INT_FLAG.vhd" in Library work.
+Architecture arch of Entity int_flag is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/prog_rom.vhd" in Library work.
+Architecture low_level_definition of Entity prog_rom is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/ALU.vhd" in Library work.
+Architecture arch of Entity alu is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_ControlUnit_Starter_exp7.vhd" in Library work.
+Entity <control_unit> compiled.
+Entity <control_unit> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/reg_file.vhd" in Library work.
+Architecture arch of Entity registerfile is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/pc.vhd" in Library work.
+Architecture arch of Entity pc is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/C_Flag.vhd" in Library work.
+Architecture arch of Entity c_flag is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/Z_Flag.vhd" in Library work.
+Architecture arch of Entity z_flag is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/scratch_ram.vhd" in Library work.
+Architecture arch of Entity scr is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/SP.vhd" in Library work.
+Architecture arch of Entity sp is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/SHAD_FLAG.vhd" in Library work.
+Architecture arch of Entity shad_flag is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_RAT_MCU_starter_exp7.vhd" in Library work.
+Architecture behavioral of Entity rat_mcu is up to date.
+Compiling vhdl file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_RAT_MCU_Wrapper_exp7.vhd" in Library work.
+Architecture behavioral of Entity rat_wrapper is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.36 secs
+ 
+--> 
+
+Total memory usage is 225636 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,31 @@
+Command line:
+   RAT_wrapper_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53174
+
+Wed Feb 18 14:58:45 2015
+
+
+ Elaboration Time: 0.171602 sec
+
+ Current Memory Usage: 1166.9 Meg
+
+ Total Signals          : 234
+ Total Nets             : 3141
+ Total Signal Drivers   : 74
+ Total Blocks           : 27
+ Total Primitive Blocks : 22
+ Total Processes        : 47
+ Total Traceable Variables  : 209
+ Total Scalar Nets and Variables : 26387
+Total Line Count : 297
+Total Line Count : 297
+Total Line Count : 297
+
+ Total Simulation Time: 2.43362 sec
+
+ Current Memory Usage: 695.022 Meg
+
+Wed Feb 18 16:24:47 2015
+

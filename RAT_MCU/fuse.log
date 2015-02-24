@@ -1,0 +1,56 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/RAT_wrapper_tb_isim_beh.exe -prj C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/RAT_wrapper_tb_beh.prj work.RAT_wrapper_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/counter_mux.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/counter.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/Z_Flag.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/SP.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/SHAD_FLAG.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/scratch_ram.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/reg_file.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/prog_rom.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/pc.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/INT_FLAG.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_ControlUnit_Starter_exp7.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/C_Flag.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_RAT_MCU_starter_exp7.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/F14_RAT_MCU_Wrapper_exp7.vhd" into library work
+Parsing VHDL file "C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/RAT_wrapper_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture arch of entity INT_FLAG [int_flag_default]
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ramb16_s18_v of entity RAMB16_S18 [\RAMB16_S18("0000000000000000000...]
+Compiling architecture low_level_definition of entity prog_rom [prog_rom_default]
+Compiling architecture arch of entity alu [alu_default]
+Compiling architecture behavioral of entity CONTROL_UNIT [control_unit_default]
+Compiling architecture arch of entity registerfile [registerfile_default]
+Compiling architecture arch of entity counter [counter_default]
+Compiling architecture arch of entity counter_mux [counter_mux_default]
+Compiling architecture arch of entity pc [pc_default]
+Compiling architecture arch of entity C_Flag [c_flag_default]
+Compiling architecture arch of entity Z_Flag [z_flag_default]
+Compiling architecture arch of entity scr [scr_default]
+Compiling architecture arch of entity sp [sp_default]
+Compiling architecture arch of entity shad_flag [shad_flag_default]
+Compiling architecture behavioral of entity RAT_MCU [rat_mcu_default]
+Compiling architecture behavioral of entity RAT_wrapper [rat_wrapper_default]
+Compiling architecture behavior of entity rat_wrapper_tb
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 43 VHDL Units
+Built simulation executable C:/Users/Jacobe/Desktop/RAT-MCU-Class-Project-/RAT_MCU/RAT_wrapper_tb_isim_beh.exe
+Fuse Memory Usage: 62476 KB
+Fuse CPU Usage: 1403 ms

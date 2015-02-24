@@ -29,9 +29,104 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAT_MCU.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAT_MCU.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="RAT_MCU.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAT_MCU_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAT_wrapper.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RAT_wrapper.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RAT_wrapper.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RAT_wrapper_tb_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="RAT_wrapper_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="RAT_wrapper_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1424252507" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1424252507">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1424253666" xil_pn:in_ck="331363805886875704" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1424253666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="C_Flag.vhd"/>
+      <outfile xil_pn:name="F14_ControlUnit_Starter_exp7.vhd"/>
+      <outfile xil_pn:name="F14_RAT_MCU_Wrapper_exp7.vhd"/>
+      <outfile xil_pn:name="F14_RAT_MCU_starter_exp7.vhd"/>
+      <outfile xil_pn:name="INT_FLAG.vhd"/>
+      <outfile xil_pn:name="RAT_MCU_tb.vhd"/>
+      <outfile xil_pn:name="RAT_wrapper_tb.vhd"/>
+      <outfile xil_pn:name="SHAD_FLAG.vhd"/>
+      <outfile xil_pn:name="SP.vhd"/>
+      <outfile xil_pn:name="Z_Flag.vhd"/>
+      <outfile xil_pn:name="counter.vhd"/>
+      <outfile xil_pn:name="counter_mux.vhd"/>
+      <outfile xil_pn:name="pc.vhd"/>
+      <outfile xil_pn:name="prog_rom.vhd"/>
+      <outfile xil_pn:name="reg_file.vhd"/>
+      <outfile xil_pn:name="scratch_ram.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1424253666" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="9141402642460798994" xil_pn:start_ts="1424253666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1424253666" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4610126978657537684" xil_pn:start_ts="1424253666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1424252507" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4251691937063591566" xil_pn:start_ts="1424252507">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1424253666" xil_pn:in_ck="331363805886875704" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1424253666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.vhd"/>
+      <outfile xil_pn:name="C_Flag.vhd"/>
+      <outfile xil_pn:name="F14_ControlUnit_Starter_exp7.vhd"/>
+      <outfile xil_pn:name="F14_RAT_MCU_Wrapper_exp7.vhd"/>
+      <outfile xil_pn:name="F14_RAT_MCU_starter_exp7.vhd"/>
+      <outfile xil_pn:name="INT_FLAG.vhd"/>
+      <outfile xil_pn:name="RAT_MCU_tb.vhd"/>
+      <outfile xil_pn:name="RAT_wrapper_tb.vhd"/>
+      <outfile xil_pn:name="SHAD_FLAG.vhd"/>
+      <outfile xil_pn:name="SP.vhd"/>
+      <outfile xil_pn:name="Z_Flag.vhd"/>
+      <outfile xil_pn:name="counter.vhd"/>
+      <outfile xil_pn:name="counter_mux.vhd"/>
+      <outfile xil_pn:name="pc.vhd"/>
+      <outfile xil_pn:name="prog_rom.vhd"/>
+      <outfile xil_pn:name="reg_file.vhd"/>
+      <outfile xil_pn:name="scratch_ram.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1424253673" xil_pn:in_ck="331363805886875704" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1524099295230410438" xil_pn:start_ts="1424253666">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RAT_wrapper_tb_beh.prj"/>
+      <outfile xil_pn:name="RAT_wrapper_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="fuse.log"/>
+      <outfile xil_pn:name="isim"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="xilinxsim.ini"/>
+    </transform>
+    <transform xil_pn:end_ts="1424300307" xil_pn:in_ck="-1662390206266838502" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="5008858457741581011" xil_pn:start_ts="1424300304">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="RAT_wrapper_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.cmd"/>
+      <outfile xil_pn:name="isim.log"/>
+    </transform>
+  </transforms>
 
 </generated_project>
